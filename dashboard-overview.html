@@ -1,0 +1,71 @@
+<!-- control bar -->
+<div class="control-bar col-md-12" ng-init="selection = 'data'">
+    <ul class="control-bar-left">
+        <li><a ui-sref="main.dashboard.overview"><span class="control-icon glyphicon glyphicon-paperclip" ></span>Image List</a></li>
+    </ul>
+    <ul class="control-bar-right">
+        <li><span class="control-icon grid-ico-print" ng-click="printer()" alt="Print page"></span></li>
+    </ul>
+</div>
+
+<!-- container for dashboard view -->
+<div class="grid-content col-md-12">
+    <!-- graph panel -->
+    <div class="dashboard-graph" ng-show="selection === 'data'">
+        <!-- header -->
+        <h1>Image List</h1>
+
+        <div class="col-md-12">
+            <div class="form-group required-control">
+                <div class="input-group">
+                    <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </span>
+                    <input type="text" id="filtertext" class="form-control" ng-model="filtertext" placeholder="Search Images by text...">
+
+                </div>
+                <div style="margin-top:10px"></div>
+
+                <div id="scrollContainer" style=" overflow-y: scroll; max-height: 600px;">
+                    <!--<img id="x" data-ng-repeat="image in images" data-ng-src="http://placehold.it/225x250&amp;text={{image}}">-->
+
+                    <table class="table table-bordered grid-table">
+                        <thead>
+                            <tr class="tableHeader">
+                                <th class="col-md-1">#</th>
+                                <th class="col-md-1">Image</th>
+                                <th class="col-md-1">Author</th>
+                                <th class="col-md-7">Tags</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody infinite-scroll-container="'#scrollContainer'" infinite-scroll-disabled='busy' infinite-scroll='changePage()'>
+                            <tr ng-repeat="image in imageList">
+                                <td>{{$index+1}}</td>
+                                <td>
+                                    <a ng-href="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg" target="_blank"><img ng-src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}_t.jpg"
+                                        /></a>
+                                </td>
+                                <td>{{image.author}}</td>
+                                <td>{{image.tags}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style='clear: both;'></div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="alert alert-success" role="alert" ng-init="showAlert = true" ng-show="showAlert && imageList.length <= 0">
+                        <button type="button" class="close" data-dismiss="alert" ng-click="showAlert = false">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button> Sorry, there are no images! Please input the your search term at least 3 characters
+                    </div>
+                </div>
+
+            </div>
+            <!-- END TABLE LIST -->
+
+        </div>
+    </div>
+</div>

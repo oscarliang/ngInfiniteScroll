@@ -1,0 +1,34 @@
+<div class="navbar navbar-fixed-top grid-nav" role="navigation">
+  <div class="container">
+    <div class="navbar-header hidden-xs">
+      <span>
+        <img height="30px" src="https://secure.static.tumblr.com/9faf3a59641044c85a09cdfde912709f/xk1usot/H4mmooc0s/tumblr_static_flickr-logo.png" style="margin-top: 15px"/>
+      </span>
+    </div>
+    <div class="visible-xs">
+      <span>
+                <img height="30px" src="https://secure.static.tumblr.com/9faf3a59641044c85a09cdfde912709f/xk1usot/H4mmooc0s/tumblr_static_flickr-logo.png" style="margin-top: 15px;margin-left:15px"/>
+            </span>
+    </div>
+    <div class="collapse navbar-collapse hidden-xs">
+      <ul class="nav navbar-nav navbar-right grid-nav-pages">
+        <li ng-class="{active: selectedNav === 'dashboard'}"><a ui-sref="main.dashboard.overview">Dashboards</a></li>
+        <li ng-class="{active: selectedNav === 'manage'}"><a>Manage</a></li>
+        <li>
+          <span ng-click="showMenu = !showMenu" class="settingsNav glyphicon glyphicon-log-out">
+                        <ul id="menu-settings" ng-class="{ 'nav-hidden': !showMenu }"  ng-mouseleave="showMenu = false" >
+                            <li class="menu-item-about">
+                                <span class="grid-ico-light-bulb"></span>About
+        </li>
+        <li class="menu-item-logout" ng-click="logout()">
+          <span class="grid-ico-logout"></span>Logout
+        </li>
+      </ul>
+      </span>
+      </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container" ui-view></div>

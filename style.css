@@ -1,0 +1,559 @@
+html,
+body {
+  overflow-x: hidden;
+  /* Prevent scroll on narrow devices */
+  height: 100%;
+}
+
+body {
+  padding-top: 70px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+  font-weight: 100;
+  color: #444;
+  background: #f5f5f5;
+  font-size: 15px;
+  overflow-y: scroll;
+}
+
+body #grid-content h3,
+body #grid-content h4,
+body #grid-content h5,
+body #grid-content h6 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  margin: 0px;
+  padding: 10px 0;
+}
+
+body #grid-content h1 {
+  font-size: medium;
+  font-weight: 500;
+  margin: 5px;
+  padding: 14px;
+  border-bottom: 1px solid #e6f9ff;
+}
+
+body #grid-content h2 {
+  font-size: 20px;
+}
+
+body #grid-content .h3 {
+  font-size: medium;
+}
+
+body #grid-content tbody {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+47,ededed+100;White+3D+%231 */
+  background: #ffffff;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+  /* IE6-9 */
+}
+
+body #grid-content .page-layout {
+  padding-top: 20px;
+}
+
+body #grid-content .submitButton {
+  background-color: #7DC3CB;
+}
+
+body #grid-content .tableHeader {
+  background-color: #B1DBDF;
+}
+
+
+body #grid-content .form-group .required:after {
+  content: "*";
+  color: #c4410d;
+  position: relative;
+  top: 3px;
+  left: 4px;
+}
+
+body #grid-content .grid-nav {
+  height: 60px;
+  background: #363535;
+}
+
+body #grid-content .grid-nav .navbar-header {
+  margin-left: -42px;
+}
+
+body #grid-content .grid-nav .navbar-header .navbar-brand {
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: transparent;
+  font-size: 0em;
+  padding: 20px;
+  height: auto;
+}
+
+body #grid-content .grid-nav .grid-nav-pages {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li {
+  height: 60px;
+  transition: all 0.2s ease-out;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li:hover a,
+body #grid-content .grid-nav .grid-nav-pages li.active a {
+  color: #EBEBEB!important;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li a {
+  color: #D6D6D6;
+  padding-top: 20px;
+  background: transparent;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li .settingsNav {
+  cursor: pointer;
+  height: 60px;
+  line-height: 60px;
+  width: 40px;
+  color: #fff;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li .settingsNav:before {
+  font-size: 1.6em;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li .settingsNav #menu-settings {
+  position: absolute;
+  background-color: #696969;
+  color: #000;
+  z-index: 10;
+  margin-top: -7px;
+  margin-left: -7.4em;
+  min-width: 10em;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0px 2px 2px;
+  padding-left: 10px;
+  opacity: 1;
+  transition: all 0.2s ease-out;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li .settingsNav #menu-settings.nav-hidden {
+  opacity: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 0px;
+  overflow: hidden;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li .settingsNav #menu-settings:before {
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #696969;
+  position: absolute;
+  margin-top: -7px;
+  right: 15px;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li .settingsNav #menu-settings li {
+  list-style: none;
+  font-weight: 100;
+  font-size: 1em;
+  color: #fff;
+  border-bottom: 0px;
+  text-transform: uppercase;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li .settingsNav #menu-settings li:before {
+  padding-right: 10px;
+  font-family: 'gridanalytics';
+}
+
+body #grid-content .grid-nav .grid-nav-pages li .settingsNav #menu-settings li:hover {
+  color: #fccf80;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li .settingsNav #menu-settings li span {
+  padding-right: 10px;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li:nth-child(1):hover,
+body #grid-content .grid-nav .grid-nav-pages li:nth-child(1).active {
+  border-bottom: 5px solid #7dc3cb;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li:nth-child(2):hover,
+body #grid-content .grid-nav .grid-nav-pages li:nth-child(2).active {
+  border-bottom: 5px solid #b9a7c6;
+}
+
+body #grid-content .grid-nav .grid-nav-pages li:nth-child(3):hover,
+body #grid-content .grid-nav .grid-nav-pages li:nth-child(3).active {
+  border-bottom: 5px solid #c4410d;
+}
+
+body #grid-content .grid-holder {
+  padding: 0px;
+  /* Animation */
+}
+
+body #grid-content .grid-holder.ui-view-container {
+  position: relative;
+}
+
+body #grid-content .grid-holder.ng-enter,
+body #grid-content .grid-holder.ng-leave {
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+}
+
+body #grid-content .grid-holder.ng-enter {
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+}
+
+body #grid-content .grid-holder.ng-enter-active {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+
+body #grid-content .grid-holder.ng-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+body #grid-content .grid-holder.ng-leave-active {
+  opacity: 0;
+  transform: translate3d(1000px, 0, 0);
+}
+
+body #grid-content .grid-holder .grid-table-control {
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+body #grid-content .grid-holder .grid-table-control:hover {
+  color: #1d8f99;
+}
+
+body #grid-content .grid-holder .grid-table-control span {
+  margin-right: .3em;
+}
+
+body #grid-content .subholder.ui-view-container {
+  position: relative;
+}
+
+body #grid-content .pagination > .active > a,
+body #grid-content .pagination > .active > span,
+body #grid-content .pagination > .active > a:hover,
+body #grid-content .pagination > .active > span:hover,
+body #grid-content .pagination > .active > a:focus,
+body #grid-content .pagination > .active > span:focus,
+body #grid-content .pagination > li > a {
+  cursor: pointer;
+}
+
+body #grid-content .pagination > .active > a,
+body #grid-content .pagination > .active > span,
+body #grid-content .pagination > .active > a:hover,
+body #grid-content .pagination > .active > span:hover,
+body #grid-content .pagination > .active > a:focus,
+body #grid-content .pagination > .active > span:focus {
+  background-color: #1d8f99;
+  border-color: #197F88;
+  color: #ffffff;
+}
+
+body #grid-content .pagination > li > a,
+body #grid-content .pagination > li > span {
+  color: #197F88;
+}
+
+.form-layout {
+  padding-top: 20px;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.placeholder {
+  color: #838383;
+}
+
+.row-animate.ng-leave {
+  /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+footer {
+  padding: 30px 0;
+}
+
+#sidebar .sidebar-links .tab {
+  display: block;
+  padding: 16px 0;
+  cursor: pointer;
+  color: #747474;
+  font-size: 15px;
+  transition: .2s;
+}
+
+#sidebar .sidebar-links .tab .sidebar-tab-icon {
+  transition: .2s;
+  padding-right: 11px;
+  font-size: 1.0em;
+}
+
+#sidebar .sidebar-links .tab.active {
+  cursor: default;
+  color: #1F1E1E;
+}
+
+#sidebar .sidebar-links .tab.active:nth-child(1) .sidebar-tab-icon,
+#sidebar .sidebar-links .tab:hover:nth-child(1) .sidebar-tab-icon,
+#sidebar .sidebar-links .tab:focus:nth-child(1) .sidebar-tab-icon {
+  color: #f99e00!important;
+}
+
+#sidebar .sidebar-links .tab.active:nth-child(2) .sidebar-tab-icon,
+#sidebar .sidebar-links .tab:hover:nth-child(2) .sidebar-tab-icon,
+#sidebar .sidebar-links .tab:focus:nth-child(2) .sidebar-tab-icon {
+  color: #1a7e50!important;
+}
+
+#sidebar .sidebar-links .tab.active:nth-child(3) .sidebar-tab-icon,
+#sidebar .sidebar-links .tab:hover:nth-child(3) .sidebar-tab-icon,
+#sidebar .sidebar-links .tab:focus:nth-child(3) .sidebar-tab-icon {
+  color: #c4410d!important;
+}
+
+#sidebar .sidebar-links .tab.active:nth-child(4) .sidebar-tab-icon,
+#sidebar .sidebar-links .tab:hover:nth-child(4) .sidebar-tab-icon,
+#sidebar .sidebar-links .tab:focus:nth-child(4) .sidebar-tab-icon {
+  color: #7dc3cb!important;
+}
+
+#sidebar .sidebar-links .tab:hover,
+#sidebar .sidebar-links .tab:focus {
+  text-decoration: none;
+  color: #1F1E1E;
+}
+
+.control-bar {
+  background: #F8F8F8;
+  height: 50px;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #EBEBEB;
+  margin-bottom: .5em;
+}
+
+.control-bar span.control-icon {
+  color: #837D7D;
+  line-height: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.control-bar ul {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.control-bar ul li {
+  font-family: Helvetica;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.control-bar ul li:hover span.control-icon,
+.control-bar ul li.active span.control-icon {
+  color: #FAD88D;
+}
+
+.control-bar .control-bar-right {
+  float: right;
+}
+
+.control-bar .control-bar-right li {
+  padding-left: 2em;
+}
+
+.control-bar .control-bar-right span.control-icon {
+  font-size: 1.5em;
+}
+
+.control-bar .control-bar-left {
+  float: left;
+}
+
+.control-bar .control-bar-left li {
+  padding-right: 1.5em;
+}
+
+.control-bar .control-bar-left span.control-icon {
+  padding-right: .5em;
+}
+
+.grid-content {
+  background: #fdfdfd;
+  border: 1px solid #EBEBEB;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  margin-bottom: 1em;
+  padding: 0px;
+  /* Animation */
+}
+
+.grid-content.ui-view-container {
+  position: relative;
+}
+
+
+
+.grid-content .ng-hide {
+  display: none !important;
+}
+
+.grid-content .page-title {
+  padding-bottom: 15px;
+}
+
+.grid-content .page-title .page-summary .subheading {
+  font-size: 16px;
+  color: #e67100;
+  font-weight: lighter;
+  font-family: 'Open Sans';
+  cursor: pointer;
+}
+
+.grid-content .page-title .page-summary .subheading::before {
+  font-family: 'gridanalytics' !important;
+  margin-right: 5px;
+}
+
+.grid-content .page-title .page-summary .subheading .subheadingbreak {
+  color: #000;
+}
+
+.grid-content .dashboard-options .filter-options {
+  display: table;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 500px;
+}
+
+.grid-content .dashboard-options .filter-options ul {
+  list-style: none;
+}
+
+.grid-content .dashboard-options .filter-options .tab-holder {
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  display: table-cell;
+  background-color: #7dc3cb;
+}
+
+.grid-content .dashboard-options .filter-options .tab-holder li {
+  padding: 20px;
+  width: 70px;
+  text-align: center;
+}
+
+.grid-content .dashboard-options .filter-options .tab-holder li .tab {
+  font-size: 1.5em;
+  font-weight: 100;
+  color: #EEF2F3;
+  text-align: center;
+  text-decoration: none;
+}
+
+.grid-content .dashboard-options .filter-options .tab-holder li .tab:hover {
+  color: #025975;
+}
+
+.grid-content .dashboard-options .filter-options .tab-holder li .active {
+  color: #025975;
+}
+
+.grid-content .dashboard-options .filter-options .tab-content {
+  height: auto;
+  display: table-cell;
+}
+
+.grid-content .dashboard-options .filter-options .tab-content h1 {
+  margin: 0;
+  padding: 18px;
+  font-size: 1.5em;
+  padding-left: 15px!important;
+}
+
+.grid-content .dashboard-options .filter-options .tab-content label,
+.grid-content .dashboard-options .filter-options .tab-content .tooltipsBtn {
+  min-width: 120px;
+  font-weight: lighter;
+}
+
+.grid-content .dashboard-options .filter-options .tab-content li {
+  clear: both;
+  display: table;
+  margin-bottom: 10px;
+}
+
+.grid-content .dashboard-options .filter-options .tab-content li > label {
+  float: left;
+}
+
+.grid-content .dashboard-options .filter-options .tab-content li > span {
+  float: left;
+}
+
+.grid-content .dashboard-options .filter-options .tab-content .btn-group {
+  margin: 2px !important;
+}
+
+.grid-content .dashboard-graph h2 {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+
+
+.grid-content .dashboard-graph .chart-holder .chart-item-with-title {
+  border-radius: 3px 3px 0 0;
+  border-bottom: none;
+}
+
+.grid-content .dashboard-graph .chart-holder .chart-item-title {
+  padding: 20px;
+  background: #F7F7F7;
+  color: #666;
+  border-radius: 0 0 3px 3px;
+  border: 1px solid #EEEEEE;
+  border-top: 1px solid #F1F1F1;
+}
+
+.grid-content .dashboard-graph .nextprebtns {
+  text-align: center;
+}
+
